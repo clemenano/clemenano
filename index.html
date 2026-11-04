@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil étudiant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #101c3a, #245b78);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .carte {
+            background: #ffffff;
+            color: #26344d;
+            max-width: 750px;
+            width: 100%;
+            padding: 45px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #245b78;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #172b4d;
+            margin-bottom: 10px;
+        }
+
+        .sous-titre {
+            color: #b18a36;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .competences {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .competences span {
+            background: #eaf1f7;
+            color: #172b4d;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .bouton {
+            display: inline-block;
+            background: #172b4d;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            margin-top: 15px;
+        }
+
+        .bouton:hover {
+            background: #b18a36;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carte">
+
+        <div class="avatar">👩‍💻</div>
+
+        <h1>Bonjour, je suis [Votre nom]</h1>
+
+        <div class="sous-titre">
+            Étudiante en informatique
+        </div>
+
+        <p>
+            Passionnée par les nouvelles technologies et le monde
+            du numérique, je m'intéresse particulièrement à la
+            programmation, aux réseaux informatiques et à la
+            création d'applications web.
+        </p>
+
+        <h3>Mes domaines d'intérêt</h3>
+
+        <div class="competences">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Réseaux informatiques</span>
+            <span>Git et GitHub</span>
+        </div>
+
+        <p>
+            Mon ambition est de développer mes compétences,
+            de relever de nouveaux défis et de concevoir
+            des solutions informatiques utiles à la société.
+        </p>
+
+        <a class="bouton"
+           href="https://github.com/clemenano"
+           target="_blank">
+            Mon profil GitHub
+        </a>
+
+        <footer>
+            © 2026 - Ma présentation personnelle
+        </footer>
+
+    </div>
+
+</body>
+</html>
