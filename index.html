@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Portfolio professionnel de Clemenano, développeur web et passionné de technologie.">
-<title>Clemenano | Portfolio</title>
+<meta name="theme-color" content="#071426">
+
+<title>Clemenano | Portfolio professionnel</title>
 
 <style>
+
+/* =========================
+   CONFIGURATION GENERALE
+========================= */
+
 :root {
     --dark: #071426;
     --blue: #102b4c;
@@ -35,6 +42,10 @@ body {
     margin: auto;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
+
 header {
     background: rgba(7,20,38,.96);
     border-bottom: 1px solid #243b56;
@@ -55,6 +66,7 @@ nav {
     font-size: 25px;
     font-weight: bold;
     color: var(--cyan);
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -72,6 +84,72 @@ nav a {
 nav a:hover {
     color: var(--cyan);
 }
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.primary {
+    background: var(--cyan);
+    color: var(--dark);
+}
+
+.secondary {
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+/* BOUTON PROFESSIONNEL GMAIL */
+
+.email-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #55dfd0, #8bfff0);
+    color: #071426;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(85,223,208,.20);
+    transition: all .3s ease;
+}
+
+.email-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(85,223,208,.35);
+}
+
+.email-icon {
+    font-size: 21px;
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+/* =========================
+   SECTION ACCUEIL
+========================= */
 
 .hero {
     min-height: 620px;
@@ -116,29 +194,6 @@ nav a:hover {
     gap: 15px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 13px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.primary {
-    background: var(--cyan);
-    color: var(--dark);
-}
-
-.secondary {
-    border: 1px solid var(--cyan);
-    color: var(--cyan);
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-}
-
 .profile {
     width: 300px;
     height: 300px;
@@ -154,6 +209,10 @@ nav a:hover {
     color: var(--cyan);
     box-shadow: 0 0 45px rgba(85,223,208,.2);
 }
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 90px 0;
@@ -177,6 +236,10 @@ section {
     margin-top: 10px;
 }
 
+/* =========================
+   A PROPOS
+========================= */
+
 .about {
     background: var(--blue);
 }
@@ -188,6 +251,35 @@ section {
     color: var(--gray);
     font-size: 18px;
 }
+
+/* =========================
+   COMPETENCES
+========================= */
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    padding: 12px 25px;
+    border: 1px solid var(--cyan);
+    border-radius: 30px;
+    color: var(--cyan);
+    background: rgba(85,223,208,.06);
+    transition: .3s;
+}
+
+.skill:hover {
+    background: var(--cyan);
+    color: var(--dark);
+}
+
+/* =========================
+   PROJETS
+========================= */
 
 .cards {
     display: grid;
@@ -217,21 +309,6 @@ section {
     color: var(--gray);
 }
 
-.skills {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.skill {
-    padding: 12px 25px;
-    border: 1px solid var(--cyan);
-    border-radius: 30px;
-    color: var(--cyan);
-    background: rgba(85,223,208,.06);
-}
-
 .projects .card {
     display: flex;
     flex-direction: column;
@@ -244,6 +321,10 @@ section {
     font-weight: bold;
 }
 
+/* =========================
+   CONTACT
+========================= */
+
 .contact {
     background: var(--blue);
     text-align: center;
@@ -254,7 +335,7 @@ section {
     margin: 12px 0;
 }
 
-.contact a {
+.contact a:not(.email-btn) {
     color: var(--cyan);
     text-decoration: none;
 }
@@ -265,6 +346,18 @@ section {
     gap: 12px;
 }
 
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-action {
+    margin-top: 35px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     padding: 25px;
     text-align: center;
@@ -272,7 +365,12 @@ footer {
     border-top: 1px solid #294664;
 }
 
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
 @media(max-width: 800px) {
+
     nav {
         flex-direction: column;
         padding: 15px 0;
@@ -308,14 +406,44 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+@media(max-width: 480px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .email-btn {
+        width: 100%;
+        padding: 15px 12px;
+    }
+
+    nav ul {
+        gap: 12px;
+        font-size: 14px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <header>
     <nav class="container">
-        <div class="logo">CLEMENANO.</div>
+
+        <div class="logo">
+            CLEMENANO.
+        </div>
+
         <ul>
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#apropos">À propos</a></li>
@@ -323,17 +451,25 @@ footer {
             <li><a href="#projets">Projets</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
 </header>
 
 <main>
 
+<!-- =========================
+     ACCUEIL
+========================= -->
+
 <section class="container hero" id="accueil">
+
     <div class="hero-content">
+
         <small>Bienvenue sur mon portfolio</small>
 
         <h1>
-            Bonjour, je suis <span>Clemenano</span>
+            Bonjour, je suis
+            <span>Clemenano</span>
         </h1>
 
         <p>
@@ -343,39 +479,75 @@ footer {
         </p>
 
         <div class="buttons">
-            <a href="#projets" class="btn primary">Mes projets</a>
-            <a href="#contact" class="btn secondary">Me contacter</a>
+
+            <a href="#projets" class="btn primary">
+                Découvrir mes projets →
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Me contacter
+            </a>
+
         </div>
+
     </div>
 
-    <div class="profile">C</div>
+    <div class="profile">
+        C
+    </div>
+
 </section>
 
+<!-- =========================
+     A PROPOS
+========================= -->
+
 <section class="about" id="apropos">
+
     <div class="container">
+
         <div class="section-title">
             <h2>À propos de <span>moi</span></h2>
         </div>
 
         <p class="about-text">
+
             Je suis Clemenano, passionné par l'univers informatique
-            et les innovations technologiques. Je m'intéresse à la
-            création de sites web, aux interfaces modernes et aux
-            solutions numériques. Mon objectif est de continuer à
-            apprendre, développer mes compétences et réaliser des
-            projets qui apportent une réelle valeur.
+            et les innovations technologiques.
+
+            Je m'intéresse à la création de sites web, aux interfaces
+            modernes et aux solutions numériques.
+
+            Mon objectif est de continuer à apprendre, développer
+            mes compétences et réaliser des projets qui apportent
+            une réelle valeur.
+
         </p>
+
     </div>
+
 </section>
 
+<!-- =========================
+     COMPETENCES
+========================= -->
+
 <section id="competences">
+
     <div class="container">
+
         <div class="section-title">
+
             <h2>Mes <span>compétences</span></h2>
-            <p>Technologies et outils informatiques</p>
+
+            <p>
+                Technologies et outils informatiques
+            </p>
+
         </div>
 
         <div class="skills">
+
             <span class="skill">HTML5</span>
             <span class="skill">CSS3</span>
             <span class="skill">SCSS</span>
@@ -384,108 +556,197 @@ footer {
             <span class="skill">Responsive Design</span>
             <span class="skill">Développement Web</span>
             <span class="skill">Cecil</span>
+
         </div>
+
     </div>
+
 </section>
 
+<!-- =========================
+     PROJETS
+========================= -->
+
 <section id="projets">
+
     <div class="container">
+
         <div class="section-title">
+
             <h2>Mes <span>projets</span></h2>
-            <p>Découvrez quelques-unes de mes réalisations.</p>
+
+            <p>
+                Découvrez quelques-unes de mes réalisations.
+            </p>
+
         </div>
 
         <div class="cards projects">
 
             <article class="card">
+
                 <h3>L3IAGE-IGAF_2026</h3>
+
                 <p>
                     Projet et travaux informatiques disponibles
                     sur mon compte GitHub.
                 </p>
+
                 <a href="https://github.com/clemenano/L3IAGE-IGAF_2026"
-                   target="_blank" rel="noopener">
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     Voir le projet →
+
                 </a>
+
             </article>
 
             <article class="card">
+
                 <h3>Mon site Cecil</h3>
+
                 <p>
                     Projet de création d'un site personnel
                     avec le générateur de sites statiques Cecil.
                 </p>
+
                 <a href="https://github.com/clemenano/mon_site_cecil"
-                   target="_blank" rel="noopener">
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     Voir le projet →
+
                 </a>
+
             </article>
 
             <article class="card">
+
                 <h3>Mes autres réalisations</h3>
+
                 <p>
                     Retrouvez mes autres projets, dépôts
                     et expérimentations informatiques.
                 </p>
+
                 <a href="https://github.com/clemenano?tab=repositories"
-                   target="_blank" rel="noopener">
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     Tous mes projets →
+
                 </a>
+
             </article>
 
         </div>
+
     </div>
+
 </section>
 
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="contact" id="contact">
+
     <div class="container">
+
         <div class="section-title">
+
             <h2>Me <span>contacter</span></h2>
-            <p>Vous avez une idée ou un projet ? Parlons-en !</p>
+
+            <p>
+                Vous avez une idée, une proposition ou un projet ?
+                Je serais ravi d'échanger avec vous.
+            </p>
+
         </div>
 
         <div class="contact-info">
-            <p>📧 E-mail :
+
+            <p>
+                📧 E-mail :
                 <a href="mailto:clemenano@gmail.com">
                     clemenano@gmail.com
                 </a>
             </p>
 
-            <p>📱 Téléphone :
+            <p>
+                📱 Téléphone :
                 <a href="tel:+243827019818">
                     +243 827 019 818
                 </a>
             </p>
 
-            <p>💻 GitHub :
-                <a href="https://github.com/clemenano" target="_blank">
+            <p>
+                💻 GitHub :
+                <a href="https://github.com/clemenano"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     github.com/clemenano
+
                 </a>
             </p>
+
         </div>
 
-        <div class="buttons" style="justify-content:center">
-            <a class="btn primary"
-               href="mailto:clemenano@gmail.com">
-                Envoyer un message
+        <!-- BOUTON GMAIL PROFESSIONNEL -->
+
+        <div class="contact-action">
+
+            <a
+                class="email-btn"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=clemenano%40gmail.com&su=Prise%20de%20contact%20-%20Portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span class="email-icon">✉</span>
+
+                Discutons de votre projet
+
+                <span class="arrow">↗</span>
+
             </a>
+
         </div>
+
+        <p style="font-size:13px; margin-top:18px;">
+            Vous serez redirigé vers Gmail pour nous contacter.
+        </p>
+
     </div>
+
 </section>
 
 </main>
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
     <p>
         © <span id="year"></span> Clemenano.
         Tous droits réservés.
     </p>
-    <p>Conçu avec passion et créativité.</p>
+
+    <p>
+        Conçu avec passion et créativité.
+    </p>
+
 </footer>
 
 <script>
+
 document.getElementById("year").textContent =
     new Date().getFullYear();
+
 </script>
 
 </body>
